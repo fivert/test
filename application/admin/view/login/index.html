@@ -1,0 +1,65 @@
+<!DOCTYpE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-Ua-Compatible" content="IE=edge">
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <link href="__ADMIN__/plugins/layui/css/layui.css" rel="stylesheet" type="text/css"/>
+  <link href="__ADMIN__/css/login.css?v=1" rel="stylesheet" type="text/css"/>
+  <title>后台管理中心登录</title>
+</head>
+
+<body id="loginFrame">
+  <div class="wst-lo-center ">
+    <div class="wst-lo">
+      <div class="login-header">
+        <div class='login_logo'>
+          <img src="__ADMIN__/img/login_logo.png">
+        </div>
+        <div class="login_title">
+          <div class='title_cn'>商淘软件后台管理系统</div>
+          <div class='title_en'>ShangTao Soft Background Management System</div>
+        </div>
+        <div class="wst-clear"></div>
+      </div>
+      <div class="login-wrapper">
+        <div class="boxbg2"></div>
+        <div class="box">
+          <div class="content-wrap">
+            <div class="login-box">
+              <div class="login-icon1"></div>
+              <div class="login-icon2"></div>
+              <div class="login-icon3"></div>
+              <input id='loginName' type="text" class="layui-input mypars ">
+              <input id='loginPwd' type="password" class="layui-input mypars">
+              <div class="frame">
+                <input type='text' id='verifyCode' class='layui-input mypars text2'>
+                <img id='verifyImg' src="{:url('admin/login/getVerify')}" onclick='javascript:getVerify(this)'>
+              </div>
+            </div>
+            <button id="loginbtn" type="button" onclick='login()'
+              class="layui-btn layui-btn-big layui-btn-normal" style="width: 100%;">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+          </div>
+        </div>
+      </div>
+      <div class="login-footer">
+        <div class="line1"></div>
+        <div class="line2"></div>商淘软件 为电商加速
+      </div>
+    </div>
+  </div>
+
+  <input type='hidden' id='modulus' value='E67262A702627BA464BC87E7BDECBBC78D67E59183337C8AC5DEF31895CA16F9DD300839F69F6DCA4524749BAF4ADBEF5B9FE20721017D517D9C245F696437C155FA6264D6EBCE3AC1D636E332395C264BBBC061916457BB958B6DC462E4DF6606CC406F179CC379C44B85CE735E91B845B6BB6D904F2398E17CBDD83DCF7EDB'/>
+  <script>
+    window.conf = {"DOMAIN":"{:str_replace('index.php','',$Request.root.true)}","ROOT":"__ROOT__","APP":"__APP__","STATIC":"__STATIC__","SUFFIX":"{:config('url_html_suffix')}","IS_CRYPT":"1"}
+  </script>
+  <script type='text/javascript' src='__ADMIN__/js/jquery.min.js'></script>
+  <script type="text/javascript" src="__ADMIN__/plugins/layui/layui.all.js"></script>
+  <script type='text/javascript' src='__ADMIN__/js/common.js'></script>
+  <script type='text/javascript' src='__ADMIN__/js/admin.js'></script>
+  <script type="text/javascript" src="__ADMIN__/js/rsa.js"></script>
+  <script type="text/javascript" src="__ADMIN__/js/login.js?v=1"></script>
+</body>
+</html>

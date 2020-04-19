@@ -13,7 +13,6 @@ class Index
     }
 
     public function fuck(){
-        echo 'fuck 123';
         return 'fuck';
     }
 

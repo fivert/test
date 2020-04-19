@@ -7,5 +7,9 @@ class Index
     {
         return view();
     }
-	
+    
+    public function test(){
+        return 'test';
+    }
+
 }

@@ -14,6 +14,7 @@ class Index
 
     public function fuck(){
         echo 'fen';
+        echo '123';
         return 'fuck';
     }
 
